@@ -18,13 +18,19 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import Button from './src/components/Button';
+import Display from './src/components/Display';
 
 export default class App extends Component {
+  state = {
+    displayValue: '0'
+  };
+
   render() {
     return (
       <View style={styles.container}>
+        <Display value={this.state.displayValue}/>
         <View style={styles.buttons}>
-          <Button label='AC'/>
+          <Button label='Ac'/>
           <Button label='/'/>
           <Button label='7'/>
           <Button label='8'/>
